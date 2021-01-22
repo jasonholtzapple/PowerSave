@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<extension>
+	<name>PLUGIN_POWERSAVE</name>
+	<module>Plugins::PowerSave::Plugin</module>
+	<version>7.4.1</version>
+	<description>PLUGIN_POWERSAVE_DESC</description>
+	<creator>Jason Holtzapple</creator>
+	<email>jasonholtzapple@gmail.com</email>
+	<defaultState>enabled</defaultState>
+	<homepageURL>http://bitflip.net/slim/</homepageURL>
+	<optionsURL>plugins/PowerSave/settings/player.html</optionsURL>
+	<id></id>
+	<type>2</type><!-- type=extension -->
+	<targetApplication>
+		<id>SqueezeCenter</id>
+		<minVersion>7.4</minVersion>
+	        <maxVersion>*</maxVersion>
+	</targetApplication>
+</extension>

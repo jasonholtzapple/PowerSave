@@ -1,0 +1,58 @@
+# String file for PowerSave plugin
+
+PLUGIN_POWERSAVE
+	EN	PowerSave
+
+PLUGIN_POWERSAVE_ENABLE
+	EN	Enable PowerSave
+	
+PLUGIN_POWERSAVE_TIMER_SET_MENU
+	EN	Set PowerSave Idle Time
+
+PLUGIN_POWERSAVE_TURNING_OFF
+	EN	Turning PowerSave OFF
+
+PLUGIN_POWERSAVE_TURNING_ON
+	EN	Turning PowerSave ON
+
+PLUGIN_POWERSAVE_OFF
+	EN	PowerSave OFF
+
+PLUGIN_POWERSAVE_ON
+	EN	PowerSave ON
+
+PLUGIN_POWERSAVE_PLAYMODE_MENU
+	EN	Set PowerSave Activation
+
+PLUGIN_POWERSAVE_PLAYMODE_1
+	EN	PowerSave on Pause or Stop
+
+PLUGIN_POWERSAVE_PLAYMODE_2
+	EN	PowerSave on Stop
+
+PLUGIN_POWERSAVE_PLAYMODE_3
+	EN	PowerSave Always
+
+PLUGIN_POWERSAVE_DESC
+	EN	Turns your player off after a set period - either inactivity or all the time. Turn PowerSave ON through the player menus or web interface to enable the plugin after installation.
+
+PLUGIN_POWERSAVE_INTERVAL_1
+	EN	15 minutes
+
+PLUGIN_POWERSAVE_INTERVAL_2
+	EN	30 minutes
+
+PLUGIN_POWERSAVE_INTERVAL_3
+	EN	45 minutes
+
+PLUGIN_POWERSAVE_INTERVAL_4
+	EN	60 minutes
+
+PLUGIN_POWERSAVE_INTERVAL_5
+	EN	90 minutes
+
+PLUGIN_POWERSAVE_INTERVAL_6
+	EN	120 minutes
+
+PLUGIN_POWERSAVE_WEBUI_ENABLED
+	EN	Enabled
