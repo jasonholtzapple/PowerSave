@@ -1,0 +1,36 @@
+[% PROCESS settings/header.html %]
+        
+    [% WRAPPER setting title="PLUGIN_POWERSAVE_ENABLE" desc="" %]
+        <input name="pref_enabled" type="checkbox" [% IF prefs.pref_enabled == 1 %]checked [% END %] value="1">
+    [% END %]
+
+    [% WRAPPER setting title="PLUGIN_POWERSAVE_TIMER_SET_MENU" desc="" %]
+        <select name="pref_time">
+        [% option = {
+            '900'  => 'PLUGIN_POWERSAVE_INTERVAL_1',
+            '1800' => 'PLUGIN_POWERSAVE_INTERVAL_2',
+            '2700' => 'PLUGIN_POWERSAVE_INTERVAL_3',
+            '3600' => 'PLUGIN_POWERSAVE_INTERVAL_4',
+            '5400' => 'PLUGIN_POWERSAVE_INTERVAL_5',
+            '7200' => 'PLUGIN_POWERSAVE_INTERVAL_6',
+            }
+        %]
+        [% FOREACH key IN option.keys.nsort %]
+            <option [% IF prefs.pref_time == key %]selected [% END %]value="[% key %]">[% option.$key | string %]</option>
+            [% END %]
+        </select>
+    [% END %]
+
+    [% WRAPPER setting title="PLUGIN_POWERSAVE_PLAYMODE_MENU" desc="" %]
+        <select name="pref_playmode">
+            [% FOREACH option = {
+                '0' => 'PLUGIN_POWERSAVE_PLAYMODE_1',
+                '1' => 'PLUGIN_POWERSAVE_PLAYMODE_2',
+                '2' => 'PLUGIN_POWERSAVE_PLAYMODE_3',
+            } %]
+            <option [% IF prefs.pref_playmode == option.key %]selected [% END %]value="[% option.key %]">[% option.value | string %]</option>
+            [% END %]
+        </select>
+    [% END %]
+
+[% PROCESS settings/footer.html %]
