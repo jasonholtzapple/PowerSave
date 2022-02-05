@@ -25,35 +25,6 @@
 # modify it under the terms of the GNU General Public License,
 # version 2.
 #
-#-> Changelog
-#
-# 7.4.1 - 25/11/2020
-#    FIX: Players powersaving too early when mode is PowerSave Always
-# 7.4 - 15/11/2009
-#    RFE: Silence server 7.4 CSRF warnings
-# 7.0r1 - 4/9/2008
-#    RFE: Web interface for player settings
-# 7.0a3 - 5/4/2008
-#    RFE: Fix Plugin MaxVersion for SC 7.1+ (no code changes)
-# 7.0a2 - 25/11/2007
-#    RFE: SqueezeCenter 7.0 ready
-# 6.5r3 - 28/7/2007
-#    BUG: Fix for players powersaving too early
-#    RFE: Add debugging messages (enabled with d_plugin)
-# 6.5r2 - 30/10/2006
-#    RFE: Reset idle timer on stop/non-stop transition (contributed by
-#    Daniel Born)
-# 6.5 - 12/9/2006
-#    RFE: SlimServer v6.5 ready
-# 1.0.3 - 9/3/2005
-#    RFE: SlimServer v6 ready
-# 1.0.2 - 9/9/2004
-#    RFE: New setting to choose which playmodes will allow powersave
-#    BUG: Fix 'uninitialized value' warnings
-# 1.0.1 - 28/8/2004
-#    BUG: Fix crashers in pre-5.3beta servers
-# 1.0 - 27/8/2004 - Initial Release
-#
 #-> Preference Reference
 #
 # plugin_PowerSave_enabled
