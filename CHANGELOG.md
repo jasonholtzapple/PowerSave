@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+### Fixed
+- Players powering off too early after being switched on. Players without a
+  server-driven display (e.g. Squeezelite, piCorePlayer, Squeezebox Touch/Radio)
+  use the mode `off` instead of `OFF.<screensaver>` and were not detected as off
+
 ## 7.4.1 - 2020-11-25
 ### Fixed
 - Players powersaving too early when mode is PowerSave Always
