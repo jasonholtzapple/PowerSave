@@ -2,7 +2,12 @@
 
 ## Unreleased
 ### Fixed
-- Players powering off too early after being switched on
+- Players powering off too early after being switched on. On power-off LMS
+  sets the player mode to lowercase 'off'; only players with a server-driven
+  display (Squeezebox 1/2/3, Boom, Transporter, SliMP3, SoftSqueeze) then switch
+  to an 'OFF.<screensaver>' mode. Players without one (Squeezelite, piCorePlayer,
+  Squeezebox Touch/Radio/Controller, Receiver, HTTP clients) stay in 'off' and
+  were not recognised as being off.
 
 ## 7.4.1 - 2020-11-25
 ### Fixed
