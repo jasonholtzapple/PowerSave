@@ -257,8 +257,13 @@ sub checkPowerSaveTimer {
 
 		$log->debug("PowerSave state info for client $client\nmode: @{[Slim::Buttons::Common::mode ($client)]}\nplaymode: @{[Slim::Player::Source::playmode ($client)]}\n");
 
-		if ((Slim::Buttons::Common::mode ($client) !~ /^OFF/)
-			and ($myPrefs->client($client)->get('enabled'))) {
+		# skip players that are off, restart the idle timer when they come back on
+		if (Slim::Buttons::Common::mode ($client) =~ /^off/i) {
+			$powerSaveTimers{$client}{psactivated} = 1;
+			next;
+		}
+
+		if ($myPrefs->client($client)->get('enabled')) {
 		        my $curplaymode = Slim::Player::Source::playmode ($client);
 			if ($powerSaveTimers{$client}{playmode} ne $curplaymode) {
 				$log->debug("PowerSave client playmode change. Sync playmode and update modechgtime\n");

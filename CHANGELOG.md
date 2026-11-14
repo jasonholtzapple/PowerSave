@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+### Fixed
+- Players powering off too early after being switched on
+
 ## 7.4.1 - 2020-11-25
 ### Fixed
 - Players powersaving too early when mode is PowerSave Always
