@@ -296,4 +296,14 @@ sub setTimer {
 	Slim::Utils::Timers::setTimer (0, time + $interval, \&checkPowerSaveTimer);
 }
 
+sub shutdownPlugin {
+	foreach my $client ( Slim::Player::Client::clients() ) {
+		if ($myPrefs->client($client)->get('enabled_for_shutdown')
+		    and $client->power) {
+			$client->execute(['power', 0]);
+			$log->debug("PowerSave sleep due to LMS shutdown\n");
+		}
+	}
+}
+
 1;

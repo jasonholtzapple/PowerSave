@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.5.0 - 2026-11-23
+### Added
+- Add an option to switch players off as LMS shuts down
+
 ## 7.4.1 - 2020-11-25
 ### Fixed
 - Players powersaving too early when mode is PowerSave Always
