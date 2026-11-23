@@ -1,0 +1,8 @@
+root = true
+
+[*.pm]
+indent_size = 4
+indent_style = space
+
+[Plugin.pm]
+indent_style = tab
