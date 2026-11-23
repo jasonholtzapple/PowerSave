@@ -33,4 +33,8 @@
         </select>
     [% END %]
 
+    [% WRAPPER setting title="PLUGIN_POWERSAVE_ENABLE_FOR_SHUTDOWN" desc="PLUGIN_POWERSAVE_ENABLE_FOR_SHUTDOWN_DESC" %]
+        <input name="pref_enabled_for_shutdown" type="checkbox" [% IF prefs.pref_enabled_for_shutdown == 1 %]checked [% END %] value="1">
+    [% END %]
+
 [% PROCESS settings/footer.html %]

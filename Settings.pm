@@ -27,7 +27,8 @@ sub needsClient {
 sub prefs {
     my ($class, $client) = @_;
 
-    return ($prefs->client($client), qw(enabled time playmode));
+    return ($prefs->client($client),
+            qw(enabled time playmode enabled_for_shutdown));
 }
 
 sub handler {
@@ -42,12 +43,17 @@ sub handler {
     if (!defined($prefs->client($client)->get('playmode'))) {
         $prefs->client($client)->set('playmode', $playmodeDefault);
     }
+    if (!defined($prefs->client($client)->get('enabled_for_shutdown'))) {
+        $prefs->client($client)->set('enabled_for_shutdown', 0);
+    }
 
     if ($params->{'saveSettings'}) {
-        if ($params->{'enabled'} == 1) {
-            $prefs->client($client)->set('enabled', 1);
-        } else {
-            $prefs->client($client)->set('enabled', 0);
+        foreach my $boolean_pref (qw(enabled enabled_for_shutdown)) {
+            if ($params->{$boolean_pref} == 1) {
+                $prefs->client($client)->set($boolean_pref, 1);
+            } else {
+                $prefs->client($client)->set($boolean_pref, 0);
+            }
         }
         $prefs->client($client)->set('time', $params->{'time'});
         $prefs->client($client)->set('playmode', $params->{'playmode'});
@@ -56,6 +62,8 @@ sub handler {
     $params->{'enabled'}  = $prefs->client($client)->get('enabled');
     $params->{'time'}     = $prefs->client($client)->get('time');
     $params->{'playmode'} = $prefs->client($client)->get('playmode');
+    $params->{'enabled_for_shutdown'}
+        = $prefs->client($client)->get('enabled_for_shutdown');
 
     return $class->SUPER::handler($client, $params);
 }
