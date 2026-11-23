@@ -8,7 +8,7 @@
 	<creator>Jason Holtzapple</creator>
 	<email>jasonholtzapple@gmail.com</email>
 	<defaultState>enabled</defaultState>
-	<homepageURL>http://bitflip.net/slim/</homepageURL>
+	<homepageURL>https://github.com/jasonholtzapple/PowerSave</homepageURL>
 	<optionsURL>plugins/PowerSave/settings/player.html</optionsURL>
 	<id></id>
 	<type>2</type><!-- type=extension -->
