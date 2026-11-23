@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.4.2 - 2026-11-23
+### Fixed
+- Set homepage URL to point to an alive website
+
 ## 7.4.1 - 2020-11-25
 ### Fixed
 - Players powersaving too early when mode is PowerSave Always
